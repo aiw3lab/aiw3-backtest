@@ -3,12 +3,6 @@ name: aiw3-backtester
 description: Natural language → strategy code → backtest report (no client API key) — powered by AIW3 AI Trade
 version: 1.0.0
 homepage: https://aitrading.aiw3.ai
-metadata:
-  clawdbot:
-    emoji: "🧪"
-    requires:
-      env: []
-    files: ["plugin.ts"]
 tags: [backtest, trading, quant, finance, strategy, aiw3, ai-trade, report]
 ---
 
@@ -45,7 +39,7 @@ Optional environment variables for the skill client:
 
 | Variable | Required | Description | Default |
 |---|---|---|---|
-| `AIW3_BACKTESTER_BASE_URL` | No | AIW3 AI Trade base URL | `http://localhost:3008` |
+| `AIW3_BACKTESTER_BASE_URL` | No | AIW3 AI Trade base URL | `https://aitrading.aiw3.ai` |
 
 ## Usage examples
 
@@ -175,4 +169,3 @@ Your server may call external services internally (LLM providers + backtest engi
 - Do **not** expose this server publicly without rate limiting / auth if you run it on the internet.
 - Strategy prompts and code may be sent to your configured LLM provider (server-side).
 - Backtest requests are sent to your configured backtest engine (server-side).
-
